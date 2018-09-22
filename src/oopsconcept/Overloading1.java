@@ -8,6 +8,7 @@ public class Overloading1 {
 		System.out.println(obj.add(5,7));
 		System.out.println(obj.add("nilesh","patel"));
 		System.out.println(obj.add(6,7));
+		System.out.println(obj.add(5,8));
 	}
 	
 	public String add(String a, String b) {
