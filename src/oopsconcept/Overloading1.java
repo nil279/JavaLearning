@@ -11,6 +11,7 @@ public class Overloading1 {
 		System.out.println(obj.add(5,8));
 		System.out.println(obj.add(3,2));
 		System.out.println(obj.add(3,2));
+		System.out.println(obj.add(3,1));
 	}
 	
 	public String add(String a, String b) {
