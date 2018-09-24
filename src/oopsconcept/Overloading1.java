@@ -1,7 +1,11 @@
 package oopsconcept;
 
-public class Overloading1 {
+//Polymorphism allows us to perform a single action in different ways. For example, lets say we have a class Animal that has a method sound(). Since this is a generic class so we can’t give it a implementation like: Roar, Meow, Oink etc. We had to give a generic message.
 
+//Compile time Polymorphism or Static Ploymorphism
+
+public class Overloading1 {
+	// compile  time polymorphism
 	public int add(int a , int b){
 		return a+b;
 	}
