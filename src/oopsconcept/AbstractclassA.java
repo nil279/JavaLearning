@@ -31,6 +31,7 @@ public class AbstractclassA extends Abstractclass {
 	      System.out.println(obj.calculateSalary());
 	      System.out.println(obj.empname());
 	      System.out.println(obj2.empdetails());
+	      System.out.println("test");
 	      
 	      
 	   }
