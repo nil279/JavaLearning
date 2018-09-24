@@ -2,25 +2,17 @@ package oopsconcept;
 
 public class Overloading1 {
 
+	public int add(int a , int b){
+		return a+b;
+	}
+	
+	public String add (String a , String b){
+		return a+" "+b;
+	}
+	
 	public static void main(String args[]) {
-		System.out.println("main method");
 		Overloading1 obj = new Overloading1();
-		System.out.println(obj.add(5,7));
-		System.out.println(obj.add("nilesh","patel"));
-		System.out.println(obj.add(6,7));
-		System.out.println(obj.add(3,1));
-		System.out.println("created dev1");
-		System.out.println("created dev2");
-	}
-	
-	public String add(String a, String b) {
-		System.out.println("String");
-		return a+"---"+b;
-	}
-	
-	public int add(int a , int b) {
-		System.out.println("Integer ");
-		return a + b ;
-	
+		System.out.println(obj.add(3, 4));
+		System.out.println(obj.add("nilesh","Patel"));
 	}
 }

@@ -15,6 +15,11 @@ public class InterfaceMamal implements Interfaceanimal {
 	 public int noOfLegs() {
 	      return 0;
 	   }
+	 @Override
+		public String origin() {
+		 System.out.println("Mammal origin");
+			return null;
+		}
 
 	 public static void main(String[] args) {
 		System.out.println();
@@ -23,4 +28,6 @@ public class InterfaceMamal implements Interfaceanimal {
 		obj.eat();
 		obj.travel();
 	}
+
+	
 }
