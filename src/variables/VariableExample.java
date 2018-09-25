@@ -32,8 +32,7 @@ public class VariableExample {
 	}
 
 	public void myMethod() {
-		// local variable
-		String mystr = "Inside Method";
+				String mystr = "Inside Method"; // local variable
 		System.out.println(mystr);
 	}
 }
