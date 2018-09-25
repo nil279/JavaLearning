@@ -6,8 +6,8 @@ public class MysqlConDemo {
 
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/sonoo";
-		String user = "centtric\\npatel";
-		String password = "Notes!60";
+		String user = "<username>";
+		String password = "password";
 		Connection con = null;
 
 		try {

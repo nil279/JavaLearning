@@ -9,7 +9,6 @@ public class Db2ConnectionDemo {
 
 	public static void main(String[] args) {
 		String JDBCClassName1 = "com.ibm.db2.jcc.DB2Driver";
-		// String JDBCClassName1 = "COM.ibm.db2os390.sqlj.jdbc.DB2SQLJDriver";
 		String url = "jdbc:db2://CPRMDEV.CENTTRIC.COM:50000/CPJDCDQtest";
 		String user = "centtric\\npatel";
 		String password = "<password>";
