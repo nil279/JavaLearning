@@ -1,21 +1,52 @@
 package dbconnection;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
+
+import filesneed.PropertyFile;
 
 public class Db2ConnectionDemo {
 
 	public static void main(String[] args) {
 		String JDBCClassName1 = "com.ibm.db2.jcc.DB2Driver";
-		String url = "jdbc:db2://CPRMDEV.CENTTRIC.COM:50000/CPJDCDQtest";
-		String user = "centtric\\npatel";
-		String password = "<password>";
+		
+		String url =null;
+		String user = null;
+		String password = null;
+		
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null ;
 		String rowcnt = null;
+		
+		// get credentials from property file : 
+		
+		Properties prop = new Properties();
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();           
+		InputStream stream = loader.getResourceAsStream("Db2Con.properties");
+		try {
+			prop.load(stream);
+			System.out.println("Loaded property file");
+			
+					url = prop.getProperty("dburl");
+					user = prop.getProperty("dbuser");
+					password = prop.getProperty("dbpassword");
+			
+				System.out.println(url);
+			    System.out.println(user);
+			    System.out.println(password);
+			
+			
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		//DB2 connection 
+		
+		
+		
 
 		try {
 			// Load class into memory

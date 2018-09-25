@@ -14,9 +14,7 @@ public class PropertyFile {
 	protected File file;
 	protected String comment=null;
 	
-	public PropertyFile() 
-	{
-	}
+	public PropertyFile() {	}
 	
 	public PropertyFile(String Directory,String filename){
 		init(new File(Directory, filename));
@@ -24,13 +22,10 @@ public class PropertyFile {
 	
 	private void init(File PropertyFile){
 		try {
-
 				file = PropertyFile;
 		
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
-	
-
 }
