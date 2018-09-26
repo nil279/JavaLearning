@@ -5,8 +5,8 @@ import java.sql.*;
 public class MysqlConDemo {
 
 	public static void main(String[] args) {
-		String url = "jdbc:mysql://localhost:3306/sonoo";
-		String user = "<username>";
+		String url = "jdbc:mysql://localhost:3306/notes_app";
+		String user = "root";
 		String password = "password";
 		Connection con = null;
 
@@ -16,7 +16,7 @@ public class MysqlConDemo {
 			 con = DriverManager.getConnection(url, user,password);
 			 
 			 Statement stmt=con.createStatement();  
-			 ResultSet rs=stmt.executeQuery("select * from emp");  
+			 ResultSet rs=stmt.executeQuery("select * from notes");  
 			 while(rs.next())  
 			 System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
 			 //con.close();  
