@@ -1,17 +1,40 @@
 package dbconnection;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
 
 public class MysqlConDemo {
 
 	public static void main(String[] args) {
-		String url = "jdbc:mysql://localhost:3306/notes_app";
-		String user = "root";
-		String password = "password";
+		String url = null;
+		String user = null;
+		String password = null;
 		Connection con = null;
 		 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
+			
+			// get credentials from property file :
+
+			Properties prop = new Properties();
+			ClassLoader loader = Thread.currentThread().getContextClassLoader();
+			InputStream stream = loader.getResourceAsStream("mysqlCon.properties");
+			
+			try {
+				prop.load(stream);
+				System.out.println("Loaded property file");
+				
+				url = prop.getProperty("dburl");
+				user = prop.getProperty("dbuser");
+				password = prop.getProperty("dbpassword");
+				//String sds = (String) prop.setProperty("temp","temporary");
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			//
 
 			 con = DriverManager.getConnection(url, user,password);
 			 
