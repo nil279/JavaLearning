@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+
 public class MysqlConDemo {
 
 	public static void main(String[] args) {
@@ -13,6 +15,8 @@ public class MysqlConDemo {
 		String password = null;
 		Connection con = null;
 		 
+		Logger logger = Logger.getLogger(MysqlConDemo.class);
+		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
@@ -24,7 +28,7 @@ public class MysqlConDemo {
 			
 			try {
 				prop.load(stream);
-				System.out.println("Loaded property file");
+				logger.info("Loaded property file");
 				
 				url = prop.getProperty("dburl");
 				user = prop.getProperty("dbuser");
@@ -41,7 +45,7 @@ public class MysqlConDemo {
 			 Statement stmt=con.createStatement();  
 			 ResultSet rs=stmt.executeQuery("select * from notes");  
 			 while(rs.next())  
-			 System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
+			 logger.info(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
 			 //con.close();  
 
 		} catch (ClassNotFoundException e) {
@@ -55,7 +59,7 @@ public class MysqlConDemo {
 			if(con!=null){
 				try {
 					con.close();
-					System.out.println("Connection closed");
+					logger.info("Connection closed");
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

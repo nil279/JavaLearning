@@ -4,12 +4,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
+//import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 import filesneed.PropertyFile;
 
 public class Db2ConnectionDemo {
 
 	public static void main(String[] args) {
+		
+		Logger logger = Logger.getLogger(Db2ConnectionDemo.class);
+		logger.info("Create connection to DB2");
+		
 		String JDBCClassName1 = "com.ibm.db2.jcc.DB2Driver";
 
 		String url = null;
@@ -19,7 +25,7 @@ public class Db2ConnectionDemo {
 		Connection conn = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-		String rowcnt = null;
+		String rowcnt = null;	
 
 		// get credentials from property file :
 
@@ -28,7 +34,9 @@ public class Db2ConnectionDemo {
 		InputStream stream = loader.getResourceAsStream("Db2Con.properties");
 		try {
 			prop.load(stream);
-			System.out.println("Loaded property file");
+			
+			logger.info("Loaded property file");
+			
 			
 			url = prop.getProperty("dburl");
 			user = prop.getProperty("dbuser");
@@ -40,9 +48,9 @@ public class Db2ConnectionDemo {
 		}
 		// DB2 connection
 
-		System.out.println(url);
-		System.out.println(user);
-		System.out.println(password);
+		logger.info(url);
+		logger.info(user);
+		logger.info(password);
 		try {
 			// Load class into memory
 			Class.forName(JDBCClassName1);
@@ -53,7 +61,7 @@ public class Db2ConnectionDemo {
 					.executeQuery("SELECT count(*) FROM DB2ADMIN.SYSCOVERAGECODE FETCH FOR FETCH ONLY WITH UR");
 			while (rs.next()) {
 				rowcnt = rs.getString(1);
-				System.out.println("Total count of rows = " + rowcnt);
+				logger.info("Total count of rows = " + rowcnt);
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -61,10 +69,10 @@ public class Db2ConnectionDemo {
 			e.printStackTrace();
 		} finally {
 			if (conn != null) {
-				System.out.println("Connected successfully.");
+				logger.info("Connected successfully.");
 				try {
 					conn.close();
-					System.out.println("Connection closed");
+					logger.info("Connection closed");
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}

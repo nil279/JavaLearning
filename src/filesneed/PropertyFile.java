@@ -30,7 +30,7 @@ public class PropertyFile {
 			// TODO: handle exception
 		}
 	}
-	
+
 	public String retrieveValue(String keyName) {
 		try {
 			FileReader fr = new FileReader(file);

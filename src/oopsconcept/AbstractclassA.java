@@ -1,5 +1,5 @@
 package oopsconcept;
-
+import org.apache.log4j.Logger;
 public class AbstractclassA extends Abstractclass {
 
 	private int workingHours;
@@ -26,12 +26,15 @@ public class AbstractclassA extends Abstractclass {
 	}
 
 	 public static void main(String args[]){ 
+		 
+		 Logger logger = Logger.getLogger(AbstractclassA.class);
+		 
 		 AbstractclassA obj = new AbstractclassA("Nilesh", 70, 40);	    
 		 AbstractclassB obj2 = new AbstractclassB("Poonam",5);
-	      System.out.println(obj.calculateSalary());
-	      System.out.println(obj.empname());
-	      System.out.println(obj2.empdetails());
-	      System.out.println("test");
+	      logger.info(obj.calculateSalary());
+	      logger.info(obj.empname());	
+	      logger.info(obj2.empdetails());
+	      logger.info("test");
 	      
 	      
 	   }
