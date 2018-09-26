@@ -29,7 +29,7 @@ public class Db2ConnectionDemo {
 		try {
 			prop.load(stream);
 			System.out.println("Loaded property file");
-
+			
 			url = prop.getProperty("dburl");
 			user = prop.getProperty("dbuser");
 			password = prop.getProperty("dbpassword");

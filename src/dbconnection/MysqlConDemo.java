@@ -9,7 +9,7 @@ public class MysqlConDemo {
 		String user = "root";
 		String password = "password";
 		Connection con = null;
- 
+		 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
