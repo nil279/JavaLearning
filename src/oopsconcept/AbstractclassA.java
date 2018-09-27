@@ -34,8 +34,7 @@ public class AbstractclassA extends Abstractclass {
 	      logger.info(obj.calculateSalary());
 	      logger.info(obj.empname());	
 	      logger.info(obj2.empdetails());
-	      logger.info("test");
-	      
+	      logger.info("test");      
 	      
 	   }
 }
