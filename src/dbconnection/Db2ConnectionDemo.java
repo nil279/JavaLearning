@@ -36,8 +36,7 @@ public class Db2ConnectionDemo {
 			prop.load(stream);
 			
 			logger.info("Loaded property file");
-			
-			
+						
 			url = prop.getProperty("dburl");
 			user = prop.getProperty("dbuser");
 			password = prop.getProperty("dbpassword");
@@ -47,7 +46,6 @@ public class Db2ConnectionDemo {
 			e1.printStackTrace();
 		}
 		// DB2 connection
-
 		logger.info(url);
 		logger.info(user);
 		logger.info(password);
