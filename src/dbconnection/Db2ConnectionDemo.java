@@ -17,6 +17,7 @@ public class Db2ConnectionDemo {
 		logger.info("Create connection to DB2");
 		
 		String JDBCClassName1 = "com.ibm.db2.jcc.DB2Driver";
+		System.out.println("test");
 
 		String url = null;
 		String user = null;
