@@ -51,6 +51,7 @@ public class FlatEarthDist {
 		double POI3 = distance(51.00750,-114.00400,po3lt,po3lg);
 		double POI4 = distance(51.00750,-114.00400,po4lt,po4lg);
 		
+		System.out.println("dddd"+POI1);
 		
 		System.out.println(POI1);
 		System.out.println(POI2);
