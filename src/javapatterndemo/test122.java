@@ -1,7 +1,7 @@
 package javapatterndemo;
 
 public class test122 {
-	
+	 
 
 	public static void main(String[] args) {
 		
