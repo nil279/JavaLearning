@@ -23,5 +23,21 @@ public class StringBufferdemo {
 			}
 			System.out.println(System.currentTimeMillis() - t);
 		}
+		
+		StringBuffer SB3 = new StringBuffer();
+		StringBuilder SB4 = new StringBuilder();
+		
+		String tmp = "String";
+		
+		SB3.append(tmp);
+		SB3.append("Buffer");
+		
+		SB4.append(tmp);
+		SB4.append("Builder");
+		
+		System.out.println(SB3);
+		
+		System.out.println(SB4);		
+		
 	}
 }
