@@ -2,9 +2,9 @@ package oopsconcept;
 
 import org.apache.log4j.Logger;
 
-public class InterfaceMamal implements Interfaceanimal {
+public class InterfaceDemo implements Interfaceanimal {
 
-	Logger logger = Logger.getLogger(InterfaceMamal.class);
+	Logger logger = Logger.getLogger(InterfaceDemo.class);
 
 	@Override
 	public void eat() {
@@ -26,13 +26,14 @@ public class InterfaceMamal implements Interfaceanimal {
 		return null;
 	}
 
+
 	public static void main(String[] args) {
 		
-		Logger logger = Logger.getLogger(InterfaceMamal.class);
+		Logger logger = Logger.getLogger(InterfaceDemo.class);
 		
 		logger.info("");
 
-		InterfaceMamal obj = new InterfaceMamal();
+		InterfaceDemo obj = new InterfaceDemo();
 		obj.eat();
 		obj.travel();
 	}

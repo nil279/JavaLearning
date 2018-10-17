@@ -1,4 +1,4 @@
- package javapatterndemo;
+ package singletonpattern;
 
 /*
  In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
@@ -16,11 +16,11 @@
  Write a static method that has return type object of this singleton class. Here, the concept of Lazy initialization in used to write this static method.
 
  */
-public class SingletonDemo {
+public class Singletonclass {
 
 	// static variable singleinstance of type Singleton
-	//private static SingletonDemo singleinstance = new SingletonDemo();
-	public static SingletonDemo singleinstance = new SingletonDemo();
+	private static Singletonclass singleinstance = new Singletonclass();
+	//public static Singletonclass singleinstance = new Singletonclass();
 
 	// variable of type String
 	public String s;
@@ -30,17 +30,17 @@ public class SingletonDemo {
 	private static String s3;
 
 	// private constructor restricted to this class itself
-	//private SingletonDemo() {
-	 SingletonDemo() {
+	//private Singletonclass() {
+	 Singletonclass() {
 		s = "Hello I am a string part of Singleton class";
 	}
 
 	// static method to create instance of Singleton class
-	public static SingletonDemo getInstance() {
+	public static Singletonclass getInstance() {
 
 		if (singleinstance == null){
 			System.out.println("there is no instance of this class");
-			singleinstance = new SingletonDemo();		
+			singleinstance = new Singletonclass();		
 		}
 		return singleinstance;	
 	}
@@ -52,13 +52,13 @@ class Main {
 	public static void main(String[] args) {
 
 		// instantiating Singleton class with variable x
-		SingletonDemo x = SingletonDemo.getInstance();
+		Singletonclass x = Singletonclass.getInstance();
 
 		// instantiating Singleton class with variable y
-		SingletonDemo y = SingletonDemo.getInstance();
+		Singletonclass y = Singletonclass.getInstance();
 
 		// instantiating Singleton class with variable z
-		SingletonDemo z = SingletonDemo.getInstance();
+		Singletonclass z = Singletonclass.getInstance();
 
 		// changing variable of instance x
 		x.s = (x.s).toUpperCase();

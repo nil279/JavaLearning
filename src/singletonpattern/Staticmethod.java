@@ -1,4 +1,4 @@
-package javapatterndemo;
+package singletonpattern;
 
 import java.io.*; 
 
