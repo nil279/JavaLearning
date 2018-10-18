@@ -12,7 +12,7 @@
 				<directory>src</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
-				</excludes>
+				</excludes> 
 			</resource>
 		</resources>
 		<plugins>

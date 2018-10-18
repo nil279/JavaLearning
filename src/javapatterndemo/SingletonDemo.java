@@ -1,4 +1,4 @@
- package javapatterndemo;
+package javapatterndemo;
 
 /*
  In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
@@ -18,31 +18,25 @@
  */
 public class SingletonDemo {
 
-	// static variable singleinstance of type Singleton
-	//private static SingletonDemo singleinstance = new SingletonDemo();
-	public static SingletonDemo singleinstance = new SingletonDemo();
+	// static variable single instance of type Singleton
+	private static SingletonDemo singleinstance = new SingletonDemo();
 
 	// variable of type String
-	public String s;
-
-	private String s2;
-
-	private static String s3;
+	public String name;
 
 	// private constructor restricted to this class itself
-	//private SingletonDemo() {
-	 SingletonDemo() {
-		s = "Hello I am a string part of Singleton class";
+	private SingletonDemo() {
+		name = "Hello I am a string part of Singleton class";
 	}
 
 	// static method to create instance of Singleton class
 	public static SingletonDemo getInstance() {
 
-		if (singleinstance == null){
+		if (singleinstance == null) {
 			System.out.println("there is no instance of this class");
-			singleinstance = new SingletonDemo();		
+			singleinstance = new SingletonDemo();
 		}
-		return singleinstance;	
+		return singleinstance;
 	}
 
 }
@@ -61,20 +55,20 @@ class Main {
 		SingletonDemo z = SingletonDemo.getInstance();
 
 		// changing variable of instance x
-		x.s = (x.s).toUpperCase();
-		y.s ="Nilesh";
-		z.s ="patel";
+		x.name = (x.name).toUpperCase();
+		y.name = "Nilesh";
+		z.name = "patel";
 
-		System.out.println("String from x is " + x.s);
-		System.out.println("String from y is " + y.s);
-		System.out.println("String from z is " + z.s);
+		System.out.println("String from x is " + x.name);
+		System.out.println("String from y is " + y.name);
+		System.out.println("String from z is " + z.name);
 		System.out.println("\n");
 
 		// changing variable of instance z
-		z.s = (z.s).toLowerCase();
+		z.name = (z.name).toLowerCase();
 
-		System.out.println("String from x is " + x.s);
-		System.out.println("String from y is " + y.s);
-		System.out.println("String from z is " + z.s);
+		System.out.println("String from x is " + x.name);
+		System.out.println("String from y is " + y.name);
+		System.out.println("String from z is " + z.name);
 	}
 }
