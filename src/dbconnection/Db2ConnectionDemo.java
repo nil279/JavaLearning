@@ -56,8 +56,7 @@ public class Db2ConnectionDemo {
 			// Establish connection
 			conn = DriverManager.getConnection(url, user, password);
 			stmt = conn.createStatement();
-			rs = stmt
-					.executeQuery("SELECT count(*) FROM DB2ADMIN.SYSCOVERAGECODE FETCH FOR FETCH ONLY WITH UR");
+			rs = stmt.executeQuery("SELECT count(*) FROM DB2ADMIN.SYSCOVERAGECODE FETCH FOR FETCH ONLY WITH UR");
 			while (rs.next()) {
 				rowcnt = rs.getString(1);
 				logger.info("Total count of rows = " + rowcnt);

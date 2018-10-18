@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/javapatterndemo/SingletonDemo.java
 package javapatterndemo;
+=======
+ package singletonpattern;
+>>>>>>> origin/develop:src/singletonpattern/Singletonclass.java
 
 /*
  In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
@@ -16,25 +20,41 @@ package javapatterndemo;
  Write a static method that has return type object of this singleton class. Here, the concept of Lazy initialization in used to write this static method.
 
  */
-public class SingletonDemo {
+public class Singletonclass {
 
+<<<<<<< HEAD:src/javapatterndemo/SingletonDemo.java
 	// static variable single instance of type Singleton
 	private static SingletonDemo singleinstance = new SingletonDemo();
+=======
+	// static variable singleinstance of type Singleton
+	private static Singletonclass singleinstance = new Singletonclass();
+	//public static Singletonclass singleinstance = new Singletonclass();
+>>>>>>> origin/develop:src/singletonpattern/Singletonclass.java
 
 	// variable of type String
 	public String name;
 
 	// private constructor restricted to this class itself
+<<<<<<< HEAD:src/javapatterndemo/SingletonDemo.java
 	private SingletonDemo() {
 		name = "Hello I am a string part of Singleton class";
+=======
+	//private Singletonclass() {
+	 Singletonclass() {
+		s = "Hello I am a string part of Singleton class";
+>>>>>>> origin/develop:src/singletonpattern/Singletonclass.java
 	}
 
 	// static method to create instance of Singleton class
-	public static SingletonDemo getInstance() {
+	public static Singletonclass getInstance() {
 
 		if (singleinstance == null) {
 			System.out.println("there is no instance of this class");
+<<<<<<< HEAD:src/javapatterndemo/SingletonDemo.java
 			singleinstance = new SingletonDemo();
+=======
+			singleinstance = new Singletonclass();		
+>>>>>>> origin/develop:src/singletonpattern/Singletonclass.java
 		}
 		return singleinstance;
 	}
@@ -46,13 +66,13 @@ class Main {
 	public static void main(String[] args) {
 
 		// instantiating Singleton class with variable x
-		SingletonDemo x = SingletonDemo.getInstance();
+		Singletonclass x = Singletonclass.getInstance();
 
 		// instantiating Singleton class with variable y
-		SingletonDemo y = SingletonDemo.getInstance();
+		Singletonclass y = Singletonclass.getInstance();
 
 		// instantiating Singleton class with variable z
-		SingletonDemo z = SingletonDemo.getInstance();
+		Singletonclass z = Singletonclass.getInstance();
 
 		// changing variable of instance x
 		x.name = (x.name).toUpperCase();

@@ -1,4 +1,4 @@
-package javapatterndemo;
+package singletonpattern;
 
 //Example to illustrate accessing the instance method . 
 import java.io.*;

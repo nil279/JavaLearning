@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 
 public class Overriding2 extends Overriding1 {
 
-	Logger logger = Logger.getLogger(InterfaceMamal.class);
+	Logger logger = Logger.getLogger(InterfaceDemo.class);
 	public String add(String a){
 		logger.info("");
 		return a;
